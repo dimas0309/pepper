@@ -1,0 +1,24 @@
+<% layout('layouts/template') %>
+<section class="contact-section">
+    <div class="d-flex justify-content-center mt-3 mb-3">
+        <div id="map"></div>
+    </div>
+
+    <script>
+        const mapToken = '<%- process.env.MAPBOX_TOKEN %>';    
+        mapboxgl.accessToken = mapToken;
+        const map = new mapboxgl.Map({
+            container: 'map', // container ID
+            style: 'mapbox://styles/mapbox/streets-v11', // style URL
+            center: [-69.87, 18.49], // starting position [lng, lat]
+            zoom: 14 // starting zoom
+        });
+
+        const marker = new mapboxgl.Marker()
+            .setLngLat([-69.870891, 18.491799])
+            .addTo(map); 
+            
+        map.addControl(new mapboxgl.NavigationControl());    
+    </script>
+</section>
+

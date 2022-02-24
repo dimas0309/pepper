@@ -1,0 +1,14 @@
+<% layout('layouts/template') %>
+<section class="home-section">
+    <div class="d-flex justify-content-around mt-3">
+        <%for(let i = 0; i < cat.length; i++) {%>
+        <div class="card" style="width: 18rem;">
+            <img src="<%=images[i]%>" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><%=cat[i]%></h5>
+            </div>
+        </div>
+        <%}%>
+    </div>
+
+</section>

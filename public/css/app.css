@@ -1,0 +1,96 @@
+ 
+.header-section {
+     width: 100%;
+     height: 200px;
+     background: url(../img/dark_bricks.jpg);
+}
+
+.header-section h1 {
+    text-align: center;
+    color: aliceblue;
+    padding: 60px;
+}
+
+.navbar-section {
+    background: url(../img/aditya-joshi-wG923J9naFQ-unsplash.jpg);
+}
+
+.navbar-section, #home, #about, #menu, #contact {
+    color: aliceblue;
+}
+
+main {
+    background: url(../img/mockup-photos-5nUNdLueQio-unsplash.jpg);
+}
+
+.home-section {
+    width: 100%;
+    height: 500px;  
+}
+
+.home-section .card {
+    background: url(../img/aditya-joshi-wG923J9naFQ-unsplash.jpg);
+}
+
+.home-section .card h5 {
+    text-align: center;
+    color: aliceblue;
+}
+
+.about-section {
+    width: 100%;
+    height: 500px;
+}
+
+.about-section .card {
+    background: url(../img/aditya-joshi-wG923J9naFQ-unsplash.jpg);
+}
+
+.about-section .card h5, p {
+    text-align: center;
+    color: aliceblue;
+}
+
+.contact-section #map {
+    width: 50%;
+    height: 300px;
+}
+
+.menu-section .card {
+    background: url(../img/aditya-joshi-wG923J9naFQ-unsplash.jpg);
+}
+
+.menu-section .card .card-header {
+    text-align: center;
+    color: aliceblue;
+}
+
+.menu-section .card .list-group-item {
+    color: aliceblue;
+    background: url(../img/dark_bricks.jpg);
+}
+
+.menu-section .card .list-group-item h5 {
+    text-align: center;
+}
+
+.menu-section .card .list-group-item .form-control {
+    width: 70px;
+}
+
+
+
+.footer-section {
+    width: 100%;
+    height: 100px;
+    background: url(../img/jonathan-borba-jSNpQciz6-w-unsplash.jpg);
+}
+
+.footer-section span {
+    color: aliceblue;
+    padding: 100px;
+}
+
+
+
+ 
