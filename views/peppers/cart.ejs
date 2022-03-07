@@ -1,0 +1,34 @@
+<% layout('layouts/template') %>
+<section class="cart-section">
+    <table class="table mt-3">
+        <thead>
+          <tr>
+            <th scope="col">Food</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%for(let i = 0; i < cart.orders.length; i++) { %>
+          <tr>
+            <td><%=cart.orders[i].food%></td>
+            <td><%=cart.orders[i].price%></td>
+            <td><%=cart.orders[i].quantity%></td>
+            <td><%=cart.orders[i].amount%></td>
+          </tr>
+          <% } %>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>Total:</td>
+            <td>
+              <input type="Number" name="total" id="total">
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+
+</section>

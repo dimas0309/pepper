@@ -78,7 +78,39 @@ main {
     width: 70px;
 }
 
+.menu-section #food, #price {
+    width: 220px;
+    background: url(../img/aditya-joshi-wG923J9naFQ-unsplash.jpg);
+    color:aliceblue;
+    border: none;
+}
 
+.menu-section #food:focus, #price:focus {
+    outline: none;
+}
+
+.cart-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.cart-section .table {
+    width: 30%;
+    background: url(../img/dark_bricks.jpg);
+    align-self: center;
+}
+
+.cart-section .table th, td{
+    color:aliceblue
+}
+
+.cart-section .table tfoot #total {
+    width: 75px;
+    background: url(../img/dark_bricks.jpg);
+    color: aliceblue;
+    border: none;
+}
 
 .footer-section {
     width: 100%;

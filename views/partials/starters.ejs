@@ -10,16 +10,21 @@
           <li class="list-group-item">
             <div class="card" style="width: 15rem;">
                 <div class="card-body">
-                  <h5 class="card-title">
-                      <%=starter.name%>
-                  </h5>
-                  <p class="card-text">
-                    <%=starter.details%>
-                </p>
-                  <h5 class="card-subtitle mb-2">
-                     <%=starter.price%> 
-                 </h5>
-                   
+                  <form action="/foods/cart/<%=id%>/orders" method="post">
+                    <h5 class="card-title">
+                        <input type="text" name="food" id="food" 
+                               value="<%=starter.name%>" readonly>
+                   </h5>
+                   <p class="card-text">
+                        <%=starter.details%>
+                   </p>
+                    <h5 class="card-subtitle mb-2">
+                        <input type="number" name="price" id="price" 
+                               value="<%=starter.price%>" readonly>
+                   </h5>
+                   <%- include('../partials/menu_buttons') %>
+
+                  </form> 
                 </div>
               </div>
           </li>
