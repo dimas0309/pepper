@@ -1,6 +1,5 @@
 const qty = document.querySelectorAll('#quantity');
 const table = document.querySelector('.table');
-const trlen = table.children[1].children.length;
 
 const showAmount = () => {
     for (let i = 0; i < qty.length; i++){
@@ -17,17 +16,21 @@ const showAmount = () => {
 
 showAmount();
 
-let sum = 0;
+const orderAmount = () => {
+    let sum = 0;
 
-for (let i = 0; i < trlen; i++){
-    const amount = table.children[1].children[i]
-                        .children[3].innerText;
+    for (let i = 0; i < table.children[1].children.length; i++){
+        const amount = table.children[1].children[i]
+                            .children[3].innerText;
 
-    sum += parseInt(amount);                    
+        sum += parseInt(amount);                    
+    }
+
+    table.children[2].children[0].children[3]
+         .children[0].value = sum;
 }
 
-table.children[2].children[0].children[3]
-    .children[0].value = sum;
+orderAmount();
 
 
 
