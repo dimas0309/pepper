@@ -20,14 +20,25 @@
           <% } %>
         </tbody>
         <tfoot>
-          <tr>
-            <td></td>
-            <td></td>
-            <td>Total:</td>
-            <td>
-              <input type="Number" name="total" id="total">
-            </td>
-          </tr>
+          <form action="/foods/cart/<%=cart._id%>/purchase" method="post">
+            <tr>
+              <td></td>
+              <td></td>
+              <td>Total:</td>
+              <td>
+                <input type="Number" name="total" id="total" readonly>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>
+                <button class="btn btn-primary">Purchase</button>
+              </td>
+              <td></td>
+            </tr>
+
+          </form>
         </tfoot>
       </table>
 

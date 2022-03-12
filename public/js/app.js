@@ -26,7 +26,7 @@ const orderAmount = () => {
         sum += parseInt(amount);                    
     }
 
-    table.children[2].children[0].children[3]
+    table.children[2].children[1].children[3]
          .children[0].value = sum;
 }
 

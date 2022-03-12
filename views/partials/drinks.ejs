@@ -1,30 +1,35 @@
 <div class="d-flex justify-content-center mt-3 mb-3">
-    <div class="card" style="width: 18rem;">
-        <div class="card-header">
-            <h5>
-                <%=drinks[0].category%>
-            </h5>
-        </div>
-        <ul class="list-group list-group-flush">
-          <%for(let drink of drinks) {%>  
-          <li class="list-group-item">
-            <div class="card" style="width: 15rem;">
-                <div class="card-body">
+  <div class="card" style="width: 18rem;">
+      <div class="card-header">
+          <h5>
+              <%=drinks[0].category%>
+          </h5>
+      </div>
+      <ul class="list-group list-group-flush">
+        <%for(let drink of drinks) {%>  
+        <li class="list-group-item">
+          <div class="card" style="width: 15rem;">
+              <div class="card-body">
+                <form action="/foods/cart/<%=id%>/orders" method="post">
                   <h5 class="card-title">
-                      <%=drink.name%>
-                  </h5>
-                  <p class="card-text">
-                    <%=drink.details%>
-                </p>
+                      <input type="text" name="food" id="food" 
+                             value="<%=drink.name%>" readonly>
+                 </h5>
+                 <p class="card-text">
+                      <%=drink.details%>
+                 </p>
                   <h5 class="card-subtitle mb-2">
-                     <%=drink.price%> 
+                      <input type="number" name="price" id="price" 
+                             value="<%=drink.price%>" readonly>
                  </h5>
                  <%- include('../partials/menu_buttons') %>
-                </div>
+
+                </form> 
               </div>
-          </li>
-          <%}%>
-           
-        </ul>
-      </div>
+            </div>
+        </li>
+        <%}%>
+         
+      </ul>
+    </div>
 </div>
