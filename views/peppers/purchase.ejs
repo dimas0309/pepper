@@ -1,0 +1,34 @@
+<% layout('layouts/template') %>
+
+<section class="purchase-section">
+    <div class="d-flex justify-content-center mt-3 mb-3">
+            <form action="/foods/purchase/<%=id%>" method="post">
+                <label for="total"  >
+                    Total:
+                </label>
+                <input class="form-control" type="Number" name="total" id="total" 
+                       value="<%=total%>" readonly>
+                <br>     
+                <label for="customer">
+                    Customer:
+                </label>  
+                <input class="form-control" type="text" name="customer" id="customer">
+                <br> 
+                <label for="phonenumber">
+                    Phone Number:
+                </label>  
+                <input class="form-control" type="text" name="phonenumber" id="phonenumber"> 
+                <br> 
+                <label for="address">
+                    Address:
+                </label>
+                <br>
+                <textarea name="address" id="address" cols="30" rows="3">
+                </textarea>
+                <br><br>
+                <button class="btn btn-primary">Purchase</button>   
+            </form> 
+    </div>
+
+</section>
+

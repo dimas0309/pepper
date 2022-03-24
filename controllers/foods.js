@@ -21,3 +21,27 @@ module.exports.showMenu = async (req, res) => {
         id, starters, salads, burgers, drinks
     })
 }
+
+module.exports.starters = async (req, res) => {
+    const starters = await Menu.find({category:'Starters'});
+
+    res.render('peppers/categories/men_starter', {starters});
+}
+
+module.exports.salads = async (req, res) => {
+    const salads = await Menu.find({category:'Salads'});
+
+    res.render('peppers/categories/men_salad', {salads});
+}
+
+module.exports.burgers = async (req, res) => {
+    const burgers = await Menu.find({category:'Burgers'});
+
+    res.render('peppers/categories/men_burger', {burgers});
+}
+
+module.exports.drinks = async (req, res) => {
+    const drinks = await Menu.find({category:'Drinks'});
+
+    res.render('peppers/categories/men_drink', {drinks});
+}

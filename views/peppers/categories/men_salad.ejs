@@ -1,0 +1,18 @@
+<% layout('layouts/template') %>
+<section class="msalad-section">
+     <div class="d-flex justify-content-around flex-wrap mt-3 mb-3">
+        <% for(let salad of salads) {%>  
+        <div class="card mb-3" style="width: 15rem;">
+            <div class="card-body">
+                <h5 class="card-title text-center">
+                    <%= salad.name %>
+                </h5>
+                <h5 class="card-subtitle text-center mt-3">
+                    <%= salad.price%>
+                </h5>
+                <p class="card-text mt-3"><%=salad.details%></p>
+            </div>
+          </div>
+        <% } %> 
+     </div>
+</section>

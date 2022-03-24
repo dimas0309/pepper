@@ -7,6 +7,7 @@ const app = express();
 const path = require('path');
 const ejsMate = require('ejs-mate');
 const session = require('express-session');
+const flash = require('connect-flash');
 const port = process.env.PORT || 8081;
 const mongoose = require('mongoose');
 const db = mongoose.connection;
@@ -42,16 +43,24 @@ app.use(session({
     name: 'session cookie name'
 }));
 
+app.use(flash());
+
+
 app.get(('/'), async(req,res) => {
     const cat = [
         'Starters','Salads','Burgers','Drinks'
     ]
-
+    
     const images = [
         'https://images.unsplash.com/photo-1621852003709-763b0b32da0b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3RhcnRlcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60',
         'https://images.unsplash.com/photo-1543339308-43e59d6b73a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHNhbGFkc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=700&q=60',
         'https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJ1cmdlcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
         'https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGRyaW5rc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=700&q=60'
+    ]
+
+    const links = [
+        '/foods/starters','/foods/salads',
+        '/foods/burgers','/foods/drinks'
     ]
 
     const session = await Sesapp.find({});
@@ -79,7 +88,7 @@ app.get(('/'), async(req,res) => {
 
     console.log(sesList.slice(-1));
 
-    res.render('peppers/home',{cat,images});
+    res.render('peppers/home',{cat,images,links});
 })
 
 app.use('/info', infoRoutes);

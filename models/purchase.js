@@ -5,6 +5,14 @@ purchaseSchema = new Schema ({
     total: {
         type: Number,
         required: true
+    },
+    created_at:{
+        type: Date,
+        default: Date.now()
+    },
+    sessionApp: {
+        type: Schema.Types.ObjectId,
+        ref: 'SessionApp'
     }
 })
 

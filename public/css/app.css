@@ -32,7 +32,7 @@ main {
     background: url(../img/aditya-joshi-wG923J9naFQ-unsplash.jpg);
 }
 
-.home-section .card h5 {
+.home-section .card h5 a{
     text-align: center;
     color: aliceblue;
 }
@@ -57,7 +57,9 @@ main {
 }
 
 .menu-section .card {
+    height: fit-content;
     background: url(../img/aditya-joshi-wG923J9naFQ-unsplash.jpg);
+    
 }
 
 .menu-section .card .card-header {
@@ -89,6 +91,12 @@ main {
     outline: none;
 }
 
+.mstarter-section .card, .msalad-section .card, 
+.mburger-section .card, .mdrink-section .card {
+    background: url(../img/dark_bricks.jpg);
+    color: aliceblue;
+}
+
 .cart-section {
     display: flex;
     flex-direction: row;
@@ -110,6 +118,24 @@ main {
     background: url(../img/dark_bricks.jpg);
     color: aliceblue;
     border: none;
+}
+
+.purchase-section label {
+    color:aliceblue;
+}
+
+.purchase-section input, textarea {
+    background: url(../img/aditya-joshi-wG923J9naFQ-unsplash.jpg);
+    color: aliceblue;
+}
+
+.purchase-section #total {
+    border: none;
+    pointer-events: none;
+}
+
+.purchase-section #customer, #phonenumber, #address {
+    color: aliceblue;
 }
 
 .footer-section {
