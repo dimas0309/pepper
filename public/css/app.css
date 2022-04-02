@@ -98,6 +98,7 @@ main {
 }
 
 .cart-section {
+    height: 350px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -118,6 +119,10 @@ main {
     background: url(../img/dark_bricks.jpg);
     color: aliceblue;
     border: none;
+}
+
+.purchase-section {
+    height: 500px;
 }
 
 .purchase-section label {

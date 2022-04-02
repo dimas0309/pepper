@@ -3,7 +3,9 @@
     <div class="d-flex justify-content-around flex-wrap mt-3 mb-3">
         <%for(let i = 0; i < cat.length; i++) {%>
         <div class="card mb-3" style="width: 18rem;">
-            <img src="<%=images[i]%>" class="card-img-top" alt="...">
+            <a href="<%=links[i]%>">
+                <img src="<%=images[i]%>" class="card-img-top" alt="...">
+            </a>
             <div class="card-body">
               <h5 class="card-title">
                   <a class="nav-link active" href="<%=links[i]%>">
@@ -14,5 +16,4 @@
         </div>
         <%}%>
     </div>
-
 </section>
